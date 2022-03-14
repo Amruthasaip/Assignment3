@@ -5,7 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="main.css">
-    <title>Home</title>
+    <script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer", {
+
+      title:{
+        text: "Nutrient Portions"              
+      },
+      data: [//array of dataSeries              
+        { //dataSeries object
+
+         /*** Change type "column" to "bar", "area", "line" or "pie"***/
+         type: "pie",
+         dataPoints: [
+		 { label: "Protein", y: 0.85 },
+{ label: "Total Fat", y: 81.11 },
+{ label: "Carbohydrate", y: 0.06 },
+{ label: "Energy", y: 717 },
+{ label: "Alcohol", y: 0 },
+{ label: "Water", y: 16.17 },
+{ label: "Caffeine", y: 0 },
+{ label: "Theobromine", y: 0 },
+{ label: "Sugars, total", y: 0.06 },
+{ label: "Fiber, total dietary", y: 0 },
+{ label: "Calcium", y: 24 },
+{ label: "Iron", y: 0.02 },
+{ label: "Magnesium", y: 2 },
+{ label: "Phosphorus", y: 24 },
+{ label: "Potassium", y: 24 },
+{ label: "Sodium", y: 643 },
+{ label: "Zinc", y: 0.09 },
+{ label: "Copper", y: 0 },
+{ label: "Selenium", y: 1 },
+{ label: "Retinol", y: 671 },
+{ label: "Vitamin A, RAE", y: 684 },
+{ label: "Carotene, beta", y: 158 },
+{ label: "Carotene, alpha", y: 0 },
+{ label: "Vitamin E (alpha-tocopherol)", y: 2.32 },
+{ label: "Vitamin D (D2 + D3)", y: 0 },
+{ label: "Cryptoxanthin, beta", y: 0 },
+{ label: "Lycopene", y: 0 },
+{ label: "Lutein + zeaxanthin", y: 0 },
+{ label: "Vitamin C", y: 0 },
+{ label: "Thiamin", y: 0.005 },
+{ label: "Riboflavin", y: 0.034 },
+{ label: "Niacin", y: 0.042 },
+{ label: "Vitamin B-6", y: 0.003 },
+{ label: "Folate, total", y: 3 },
+{ label: "Vitamin B-12", y: 0.17 },
+{ label: "Choline, total", y: 18.8 },
+{ label: "Vitamin K (phylloquinone)", y: 7 },
+{ label: "Folic acid", y: 0 },
+{ label: "Folate, food", y: 3 },
+{ label: "Folate, DFE", y: 3 },
+{ label: "Vitamin E, added", y: 0 },
+{ label: "Vitamin B-12, added", y: 0 },
+{ label: "Cholesterol", y: 215 },
+{ label: "Fatty acids, total saturated", y: 51.368 }
+
+
+         ]
+       }
+       ]
+     });
+
+    chart.render();
+  }
+  </script>
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </head>
 <body>
     <div class="topnavleft">
@@ -18,6 +85,7 @@
 <div class = "align">
 <h2>Nutrient Values Division</h2>
 <p> Find below pie chart which shows the division of all nutrients for the ingredients</p>
-<img src="stats.png" alt="stats" style="width:100%;height:100%">
+ <div id="chartContainer" style="height:100%; width: 100%;">
+  </div>
 </body>
 </html>
